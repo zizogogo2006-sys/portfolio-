@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Automation & Data Engineering - Case Studies</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --accent: #3b82f6;
+            --surface: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* Print Specific Styles */
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        @media print {
+            .page {
+                page-break-after: always;
+                height: 297mm; /* A4 height */
+                width: 210mm; /* A4 width */
+                padding: 40mm 20mm;
+                position: relative;
+                overflow: hidden;
+            }
+            .page:last-child {
+                page-break-after: auto;
+            }
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* Web View Styles (to approximate print view) */
+        @media screen {
+            body {
+                background-color: #e5e7eb;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+            .page {
+                background: white;
+                width: 210mm;
+                min-height: 297mm;
+                padding: 40mm 20mm;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                position: relative;
+            }
+        }
+
+        /* Cover Page */
+        .cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .cover h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            letter-spacing: -0.05em;
+        }
+
+        .cover h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+
+        .cover .divider {
+            height: 4px;
+            width: 80px;
+            background-color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        /* Case Study Page */
+        .header {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        .header span {
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+        }
+
+        .header h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background-color: var(--surface);
+            color: var(--text-muted);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid var(--border);
+        }
+
+        .content-section {
+            margin-bottom: 2rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .content-section p {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .impact-box {
+            background-color: var(--surface);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .impact-box h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-box p {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 20mm;
+            left: 20mm;
+            right: 20mm;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: COVER -->
+    <div class="page cover">
+        <div class="divider"></div>
+        <h1>AI Automation &<br>Data Engineering</h1>
+        <h2>Case Studies & Portfolio</h2>
+        
+        <div style="margin-top: auto;">
+            <p style="font-weight: 600;">I build systems to eliminate manual work, scale operations, and capture data.</p>
+        </div>
+    </div>
+
+    <!-- PAGE 2: CASE STUDY 1 -->
+    <div class="page">
+        <div class="header">
+            <span>Case Study 01</span>
+            <h2>Automated Email Triage</h2>
+            <div class="tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">OpenAI API</span>
+                <span class="tag">IMAP</span>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3>The Problem</h3>
+            <p>Support teams read, categorize, and route inbound emails instead of solving problems. This manual triage delays responses.</p>
+        </div>
+
+        <div class="content-section">
+            <h3>The Solution</h3>
+            <p>A Python service monitors an IMAP inbox. It intercepts unread emails and passes them to GPT-4o. The model infers intent, categorizes the ticket (Billing, Support, Refund), and drafts a response.</p>
+        </div>
+
+        <div class="impact-box">
+            <h3>Business Value</h3>
+            <p>Saves 15 hours per week of manual entry. Reduces response times from days to minutes.</p>
+        </div>
+
+        <div class="footer">
+            <span>AI Automation Portfolio</span>
+            <span>01</span>
+        </div>
+    </div>
+
+    <!-- PAGE 3: CASE STUDY 2 -->
+    <div class="page">
+        <div class="header">
+            <span>Case Study 02</span>
+            <h2>B2B Lead Qualification Engine</h2>
+            <div class="tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">HubSpot API</span>
+                <span class="tag">OpenAI API</span>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3>The Problem</h3>
+            <p>Sales representatives waste hours on low-intent inbound leads. This lowers conversion rates.</p>
+        </div>
+
+        <div class="content-section">
+            <h3>The Solution</h3>
+            <p>A Python pipeline intercepts raw leads, enriches the data, and uses an LLM to evaluate intent, budget, and authority. The system creates Deals in HubSpot for high-value leads and pushes low-tier leads to a nurture sequence.</p>
+        </div>
+
+        <div class="impact-box">
+            <h3>Business Value</h3>
+            <p>Increases sales conversions. Sales teams only spend time on high-intent prospects.</p>
+        </div>
+
+        <div class="footer">
+            <span>AI Automation Portfolio</span>
+            <span>02</span>
+        </div>
+    </div>
+
+    <!-- PAGE 4: CASE STUDY 3 -->
+    <div class="page">
+        <div class="header">
+            <span>Case Study 03</span>
+            <h2>Competitor Price Intelligence</h2>
+            <div class="tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">Playwright</span>
+                <span class="tag">Pandas</span>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3>The Problem</h3>
+            <p>Dynamic rendering and anti-bot protections block standard web scrapers. Manual tracking fails to scale.</p>
+        </div>
+
+        <div class="content-section">
+            <h3>The Solution</h3>
+            <p>A headless Playwright browser navigates Single Page Applications, waits for dynamic pricing elements to render, and extracts prices for target SKUs. Pandas cleans and transforms the data into a daily tracking report.</p>
+        </div>
+
+        <div class="impact-box">
+            <h3>Business Value</h3>
+            <p>Enables dynamic pricing and real-time market awareness. Requires zero manual data collection.</p>
+        </div>
+
+        <div class="footer">
+            <span>AI Automation Portfolio</span>
+            <span>03</span>
+        </div>
+    </div>
+
+    <!-- PAGE 5: CASE STUDY 4 -->
+    <div class="page">
+        <div class="header">
+            <span>Case Study 04</span>
+            <h2>Enterprise RAG Support Chatbot</h2>
+            <div class="tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">ChromaDB</span>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3>The Problem</h3>
+            <p>Decision-tree chatbots fail to answer technical queries. Users open support tickets for information documented elsewhere.</p>
+        </div>
+
+        <div class="content-section">
+            <h3>The Solution</h3>
+            <p>A Retrieval-Augmented Generation system. A script chunks, embeds, and stores company documentation in ChromaDB. When a user asks a question, the system retrieves the most relevant documentation and passes it to the LLM to write an answer.</p>
+        </div>
+
+        <div class="impact-box">
+            <h3>Business Value</h3>
+            <p>Deflects 40% of Tier-1 support tickets. Lowers support costs.</p>
+        </div>
+
+        <div class="footer">
+            <span>AI Automation Portfolio</span>
+            <span>04</span>
+        </div>
+    </div>
+
+    <!-- PAGE 6: CASE STUDY 5 -->
+    <div class="page">
+        <div class="header">
+            <span>Case Study 05</span>
+            <h2>Automated Video Marketing Pipeline</h2>
+            <div class="tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">FFmpeg</span>
+                <span class="tag">Google Cloud TTS</span>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3>The Problem</h3>
+            <p>Manual video editing, audio recording, and asset sourcing bottleneck daily content production.</p>
+        </div>
+
+        <div class="content-section">
+            <h3>The Solution</h3>
+            <p>A Python orchestration pipeline. It ingests a script, generates human voiceovers with Google Cloud TTS, fetches visual assets via API, and uses FFmpeg to stitch audio, video, and transitions into an MP4.</p>
+        </div>
+
+        <div class="impact-box">
+            <h3>Business Value</h3>
+            <p>Scales content output 10x without adding headcount or budget.</p>
+        </div>
+
+        <div class="footer">
+            <span>AI Automation Portfolio</span>
+            <span>05</span>
+        </div>
+    </div>
+
+</body>
+</html>

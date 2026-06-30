@@ -149,6 +149,17 @@ h1 {
     font-size: 1.1rem;
 }
 
+.fiverr-btn {
+    background: #1dbf73; /* Fiverr Green */
+    color: white;
+    border: none;
+}
+
+.fiverr-btn:hover {
+    background: #19a463;
+    box-shadow: 0 10px 20px rgba(29, 191, 115, 0.3);
+}
+
 /* Hero Section */
 .hero {
     min-height: 80vh;
